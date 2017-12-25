@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  ncurses:
+    github: mamantoha/ncurses-crystal
+    commit: 4221a57e99053cedec7f1790b06dc772c74d5927
+

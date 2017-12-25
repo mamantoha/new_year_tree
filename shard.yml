@@ -1,0 +1,16 @@
+name: new_year_tree
+version: 2018
+
+authors:
+  - Anton Maminov <anton.linux@gmail.com>
+
+targets:
+  ncurses_test:
+    main: src/new_year_tree.cr
+dependencies:
+  ncurses:
+    github: mamantoha/ncurses-crystal
+
+crystal: 0.24.1
+
+license: MIT
