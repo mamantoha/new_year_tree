@@ -4,11 +4,19 @@ TODO: Write a description here
 
 ## Installation
 
-TODO: Write installation instructions here
+[Install](https://crystal-lang.org/docs/installation/) Crystal and clone this repository.
+
+```
+git clone https://github.com/mamantoha/new_year_tree.git
+cd new_year_tree
+shards
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+crystal src/new_year_tree.cr
+```
 
 ## Development
 
@@ -16,7 +24,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/ncurses_test/fork )
+1. Fork it ( https://github.com/mamantoha/new_year_tree/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -24,4 +32,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Anton Maminov - creator, maintainer
+- [[mamantoha]](https://github.com/mamantoha) Anton Maminov - creator, maintainer
