@@ -1,6 +1,6 @@
 # New Year Tree
 
-TODO: Write a description here
+![Video](https://raw.github.com/mamantoha/new_year_tree/master/video.gif)
 
 ## Installation
 
