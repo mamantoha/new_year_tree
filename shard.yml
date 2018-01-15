@@ -9,7 +9,7 @@ targets:
     main: src/new_year_tree.cr
 dependencies:
   ncurses:
-    github: mamantoha/ncurses-crystal
+    github: jreinert/ncurses-crystal
 
 crystal: 0.24.1
 
