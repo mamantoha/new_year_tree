@@ -12,7 +12,7 @@ class NewYearTree
     NCurses::BLUE,
     NCurses::MAGENTA,
     NCurses::CYAN,
-    NCurses::WHITE
+    NCurses::WHITE,
   ]
 
   macro define_colors
@@ -159,7 +159,7 @@ class NewYearTree
       NCurses.setpos(y, cols / 2 - (text.size / 2))
       NCurses.addstr(text)
     end
- end
+  end
 end
 
 NewYearTree.new.run
