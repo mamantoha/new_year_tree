@@ -21,6 +21,10 @@ class NewYearTree
     {% end %}
   end
 
+  def self.run
+    new.run
+  end
+
   def initialize
     NCurses.init
     NCurses.cbreak
@@ -162,4 +166,4 @@ class NewYearTree
   end
 end
 
-NewYearTree.new.run
+NewYearTree.run
