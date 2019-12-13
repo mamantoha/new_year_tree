@@ -1,6 +1,6 @@
 version: 1.0
 shards:
   ncurses:
-    github: mamantoha/ncurses-crystal
-    commit: 4221a57e99053cedec7f1790b06dc772c74d5927
+    github: jreinert/ncurses-crystal
+    commit: 99a52b30893a97da2fb2b455c19c4df966452cd8
 

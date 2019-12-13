@@ -43,7 +43,7 @@ class NewYearTree
     begin
       border = sections_border(header_indent, section_size)
       ornament = sections_ornament(header_indent, section_size)
-      star = star(header_indent, cols / 2)
+      star = star(header_indent, cols // 2)
 
       loop do
         draw_text_on_center(1, "Happy New #{next_year} Year!")
@@ -61,7 +61,7 @@ class NewYearTree
 
   def sections_border(header_indent, section_size)
     coordinates = [] of Coordinates
-    sections_count = (lines - header_indent) / section_size - 1
+    sections_count = (lines - header_indent) // section_size - 1
 
     sections_count.times do |i|
       line = header_indent + (section_size * i) + 1
@@ -70,8 +70,8 @@ class NewYearTree
       return coordinates if cols / 2 < indent + section_size + 2
 
       section_size.times do |i|
-        coordinates << {y: line + i, x: cols / 2 - indent - i * 2, char: "/"}
-        coordinates << {y: line + i, x: cols / 2 + indent + i * 2, char: "\\"}
+        coordinates << {y: line + i, x: cols // 2 - indent - i * 2, char: "/"}
+        coordinates << {y: line + i, x: cols // 2 + indent + i * 2, char: "\\"}
       end
     end
 
@@ -81,7 +81,7 @@ class NewYearTree
   def sections_ornament(header_indent, section_size)
     coordinates = [] of Coordinates
 
-    sections_count = (lines - header_indent) / section_size - 1
+    sections_count = (lines - header_indent) // section_size - 1
 
     sections_count.times do |i|
       line = header_indent + (section_size * i) + 1
@@ -90,9 +90,9 @@ class NewYearTree
       return coordinates if cols / 2 < indent + section_size + 2
 
       section_size.times do |i|
-        range = (cols / 2 - indent + 1 - i * 2...cols / 2 + indent + i * 2)
+        range = (cols // 2 - indent + 1 - i * 2...cols // 2 + indent + i * 2)
 
-        ornaments = range.to_a.zip(Array.new(range.size) { rand(0..range.size/2) })
+        ornaments = range.to_a.zip(Array.new(range.size) { rand(0..range.size // 2) })
         ornaments.each do |gift|
           if gift[1] == 0
             coordinates << {y: line + i, x: gift[0], char: "O"}
