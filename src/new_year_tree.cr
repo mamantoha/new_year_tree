@@ -38,7 +38,7 @@ class NewYearTree
     header_indent = 5
     section_size = 4
     sections_count = (lines - header_indent) / section_size - 1
-    next_year = Time.now.year + 1
+    next_year = Time.local.year + 1
 
     begin
       border = sections_border(header_indent, section_size)
