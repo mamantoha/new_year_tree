@@ -5,7 +5,7 @@ authors:
   - Anton Maminov <anton.linux@gmail.com>
 
 targets:
-  ncurses_test:
+  new_year_tree:
     main: src/new_year_tree.cr
 dependencies:
   ncurses:
