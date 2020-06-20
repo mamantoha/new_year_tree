@@ -1,16 +1,16 @@
 name: new_year_tree
-version: 2019
+version: 2020
 
 authors:
-  - Anton Maminov <anton.linux@gmail.com>
+  - Anton Maminov <anton.maminov@gmail.com>
 
 targets:
   new_year_tree:
     main: src/new_year_tree.cr
 dependencies:
   ncurses:
-    github: jreinert/ncurses-crystal
+    github: repomaa/ncurses-crystal
 
-crystal: 0.32.0
+crystal: 0.35.1
 
 license: MIT
