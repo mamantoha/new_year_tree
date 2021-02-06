@@ -1,6 +1,6 @@
-version: 1.0
+version: 2.0
 shards:
   ncurses:
-    github: jreinert/ncurses-crystal
-    commit: 99a52b30893a97da2fb2b455c19c4df966452cd8
+    git: https://github.com/repomaa/ncurses-crystal.git
+    version: 0.1.0+git.commit.99a52b30893a97da2fb2b455c19c4df966452cd8
 
