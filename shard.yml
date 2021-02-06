@@ -1,5 +1,5 @@
 name: new_year_tree
-version: 2020
+version: 2021
 
 authors:
   - Anton Maminov <anton.maminov@gmail.com>
@@ -11,6 +11,6 @@ dependencies:
   ncurses:
     github: repomaa/ncurses-crystal
 
-crystal: 0.35.1
+crystal: 0.36.1
 
 license: MIT
