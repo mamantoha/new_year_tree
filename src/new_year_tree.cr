@@ -41,7 +41,6 @@ class NewYearTree
   def run
     header_indent = 5
     section_size = 4
-    sections_count = (lines - header_indent) / section_size - 1
     next_year = Time.local.year + 1
 
     begin
@@ -73,13 +72,13 @@ class NewYearTree
 
       return coordinates if cols / 2 < indent + section_size + 2
 
-      section_size.times do |i|
-        coordinates << {y: line + i, x: cols // 2 - indent - i * 2, char: "/"}
-        coordinates << {y: line + i, x: cols // 2 + indent + i * 2, char: "\\"}
+      section_size.times do |j|
+        coordinates << {y: line + j, x: cols // 2 - indent - j * 2, char: "/"}
+        coordinates << {y: line + j, x: cols // 2 + indent + j * 2, char: "\\"}
       end
     end
 
-    return coordinates
+    coordinates
   end
 
   def sections_ornament(header_indent, section_size)
@@ -93,24 +92,23 @@ class NewYearTree
 
       return coordinates if cols / 2 < indent + section_size + 2
 
-      section_size.times do |i|
-        range = (cols // 2 - indent + 1 - i * 2...cols // 2 + indent + i * 2)
+      section_size.times do |j|
+        range = (cols // 2 - indent + 1 - j * 2...cols // 2 + indent + j * 2)
 
         ornaments = range.to_a.zip(Array.new(range.size) { rand(0..range.size // 2) })
         ornaments.each do |gift|
           if gift[1] == 0
-            coordinates << {y: line + i, x: gift[0], char: "O"}
+            coordinates << {y: line + j, x: gift[0], char: "O"}
           end
         end
       end
     end
 
-    return coordinates
+    coordinates
   end
 
-  def star(y : Int32, x : Int32)
-    coordinates = [] of Coordinates
-    coordinates = [
+  def star(y : Int32, x : Int32) : Array(Coordinates)
+    [
       {y: y, x: x, char: "0"},
       {y: y - 1, x: x, char: "|"},
       {y: y - 2, x: x, char: "|"},
